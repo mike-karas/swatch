@@ -1,0 +1,10 @@
+node_modules/
+.env
+# Prospect data: brand names may be confidential
+brands/
+output/
+.next/
+*.log
+.DS_Store
+next-env.d.ts
+*.tsbuildinfo

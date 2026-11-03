@@ -1,0 +1,147 @@
+# Swatch size matrix. One entry per demo-UI slot.
+#
+#   id             unique name for the entry (used with --only)
+#   device         grouping for --only and the contact sheet
+#   type           filename prefix: <type>_<orientation>_<w>x<h>.png
+#   template       folder under templates/
+#   slot           where the asset goes in the demo UI (shown in manifest.json)
+#   ai_background  use an AI-generated background when --ai is on
+#   transparent    render with a transparent background
+#   retina         also render an @2x file at double the pixels
+#   options        passed to the template (see templates/<name>/layout.ts)
+#   sizes          orientation must match the dimensions
+
+defaults:
+  safe_area: 0.08 # padding on every side, as a fraction of the shorter side
+
+assets:
+  # ---------- Phone ----------
+  - id: phone-splash
+    device: phone
+    type: splash
+    template: splash
+    slot: mobile.launch.splash
+    ai_background: true
+    sizes:
+      - { orientation: portrait, width: 1170, height: 2532 }
+      - { orientation: landscape, width: 2532, height: 1170 }
+
+  - id: phone-app-icon
+    device: phone
+    type: app-icon
+    template: splash
+    slot: mobile.app.icon
+    options: { logo: mark, logo_scale: 0.62, tile_fill: true, gradient: false, accent_stripe: false, tagline: false }
+    sizes:
+      - { orientation: square, width: 1024, height: 1024 }
+
+  # ---------- Handheld scanner (Zebra TC5x) ----------
+  - id: scanner-splash
+    device: scanner
+    type: splash
+    template: splash
+    slot: scanner.launch.splash
+    ai_background: true
+    sizes:
+      - { orientation: portrait, width: 720, height: 1280 }
+      - { orientation: portrait, width: 1080, height: 2160 }
+
+  # ---------- Tablet ----------
+  - id: tablet-splash
+    device: tablet
+    type: splash
+    template: splash
+    slot: tablet.launch.splash
+    ai_background: true
+    sizes:
+      - { orientation: portrait, width: 1668, height: 2388 }
+      - { orientation: landscape, width: 2388, height: 1668 }
+
+  # ---------- Desktop / web ----------
+  - id: web-hero
+    device: desktop
+    type: hero
+    template: banner
+    slot: web.home.hero
+    ai_background: true
+    sizes:
+      - { orientation: landscape, width: 1920, height: 1080 }
+
+  - id: web-banner
+    device: desktop
+    type: banner
+    template: banner
+    slot: web.dashboard.banner
+    ai_background: true
+    sizes:
+      - { orientation: landscape, width: 1440, height: 400 }
+
+  - id: web-header-logo
+    device: desktop
+    type: header-logo
+    template: logo-lockup
+    slot: web.header.logo
+    transparent: true
+    retina: true
+    options: { variant: fullcolor }
+    sizes:
+      - { orientation: landscape, width: 400, height: 100 }
+      - { orientation: landscape, width: 200, height: 50 }
+
+  # ---------- In-store display / TV ----------
+  - id: display-signage
+    device: display
+    type: signage
+    template: splash
+    slot: store.display.idle
+    ai_background: true
+    sizes:
+      - { orientation: landscape, width: 1920, height: 1080 }
+      - { orientation: portrait, width: 1080, height: 1920 }
+      - { orientation: landscape, width: 3840, height: 2160 }
+
+  # ---------- Square / social / tiles ----------
+  - id: tile
+    device: square
+    type: tile
+    template: splash
+    slot: tiles.brand
+    options: { logo_scale: 0.55, accent_stripe: false, tagline: false }
+    sizes:
+      - { orientation: square, width: 1080, height: 1080 }
+      - { orientation: square, width: 512, height: 512 }
+      - { orientation: square, width: 256, height: 256 }
+
+  # ---------- Logo variants (transparent) ----------
+  - id: logo-fullcolor
+    device: logo
+    type: logo-fullcolor
+    template: logo-lockup
+    slot: brand.logo.fullcolor
+    transparent: true
+    options: { variant: fullcolor }
+    sizes:
+      - { orientation: landscape, width: 1600, height: 400 }
+      - { orientation: square, width: 1024, height: 1024 }
+
+  - id: logo-white
+    device: logo
+    type: logo-white
+    template: logo-lockup
+    slot: brand.logo.white
+    transparent: true
+    options: { variant: white }
+    sizes:
+      - { orientation: landscape, width: 1600, height: 400 }
+      - { orientation: square, width: 1024, height: 1024 }
+
+  - id: logo-dark
+    device: logo
+    type: logo-dark
+    template: logo-lockup
+    slot: brand.logo.dark
+    transparent: true
+    options: { variant: dark }
+    sizes:
+      - { orientation: landscape, width: 1600, height: 400 }
+      - { orientation: square, width: 1024, height: 1024 }

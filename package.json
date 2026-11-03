@@ -1,0 +1,67 @@
+{
+  "name": "swatch",
+  "version": "1.0.0",
+  "description": "Branded demo asset generator",
+  "scripts": {
+    "swatch": "tsx src/cli/index.ts",
+    "test": "vitest run",
+    "test:update": "vitest run -u",
+    "typecheck": "tsc --noEmit",
+    "ui": "next dev -H 127.0.0.1 -p 3000",
+    "ui:build": "next build",
+    "ui:start": "next start -H 127.0.0.1 -p 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/eb-garamond": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jost": "^5.3.0",
+    "@fontsource/lato": "^5.3.0",
+    "@fontsource/merriweather": "^5.3.0",
+    "@fontsource/montserrat": "^5.3.0",
+    "@fontsource/nunito-sans": "^5.3.0",
+    "@fontsource/open-sans": "^5.3.0",
+    "@fontsource/oswald": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
+    "@fontsource/roboto": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^15.0.0",
+    "culori": "^4.0.2",
+    "dotenv": "^18.0.9",
+    "handlebars": "^4.7.10",
+    "next": "^16.4.4",
+    "playwright": "^1.64.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sharp": "^0.35.5",
+    "yaml": "^2.9.1",
+    "yazl": "^3.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/culori": "^4.0.1",
+    "@types/node": "^26.6.6",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/yazl": "^3.3.1",
+    "pixelmatch": "^8.0.0",
+    "pngjs": "^7.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12"
+  },
+  "private": true,
+  "bin": {
+    "swatch": "./bin/swatch.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,50 @@
+# Commercial / system font → closest free Google Font.
+# Keys are matched case-insensitively against the font name the brand's site uses,
+# ignoring spaces, punctuation and suffixes like "Pro", "Std", "Web", "Bold".
+# Longer keys win, so "helvetica neue" beats "helvetica".
+fallbacks:
+  gotham: Montserrat
+  proxima nova: Montserrat
+  nexa: Montserrat
+  helvetica: Inter
+  helvetica neue: Inter
+  neue haas: Inter
+  akzidenz: Inter
+  aktiv grotesk: Inter
+  graphik: Inter
+  sf pro: Inter
+  arial: Arimo
+  univers: Roboto
+  frutiger: Open Sans
+  segoe: Open Sans
+  myriad: Source Sans 3
+  avenir: Nunito Sans
+  museo sans: Nunito Sans
+  sofia pro: Nunito Sans
+  futura: Jost
+  century gothic: Jost
+  gill sans: Lato
+  din: Barlow
+  trade gothic: Barlow
+  benton sans: Libre Franklin
+  franklin gothic: Libre Franklin
+  brandon: Josefin Sans
+  circular: DM Sans
+  tt norms: Manrope
+  gibson: Figtree
+  bebas: Bebas Neue
+  garamond: EB Garamond
+  times: Tinos
+  georgia: Gelasio
+  caslon: Libre Caslon Text
+  baskerville: Libre Baskerville
+  didot: Playfair Display
+  bodoni: Bodoni Moda
+
+# Used when nothing above matches, by the generic family the site declares.
+by_category:
+  sans-serif: Inter
+  serif: Merriweather
+  condensed: Oswald
+  display: Montserrat
+  monospace: Roboto

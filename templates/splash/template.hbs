@@ -1,0 +1,33 @@
+{{> head}}
+<style>
+.bg {
+  position: absolute; inset: 0;
+  {{#if gradient}}
+  background: radial-gradient(ellipse at 50% 45%, {{bgLight}} 0%, {{bg}} 55%, {{bgDark}} 100%);
+  {{else}}
+  background: {{bg}};
+  {{/if}}
+}
+.photo { position: absolute; inset: 0; background: url('{{{photo}}}') center / cover no-repeat; }
+.scrim { position: absolute; inset: 0; background: {{bg}}; opacity: {{scrimOpacity}}; }
+.content {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: {{gap}}px; text-align: center;
+}
+.tagline {
+  color: {{ink}}; font-size: {{taglineSize}}px; font-weight: 400; line-height: 1.25;
+  letter-spacing: 0.01em; max-width: 100%;
+}
+.stripe { position: absolute; left: 0; right: 0; bottom: 0; height: {{stripe.h}}px; background: {{stripe.color}}; }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  {{#if photo}}<div class="photo"></div><div class="scrim"></div>{{/if}}
+  <div class="safe content">
+    {{{logoHtml}}}
+    {{#if tagline}}<div class="tagline" data-fit="2">{{tagline}}</div>{{/if}}
+  </div>
+  {{#if stripe}}<div class="stripe"></div>{{/if}}
+</body>
+</html>

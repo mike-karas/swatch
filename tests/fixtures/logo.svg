@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" width="480" height="180">
+  <!-- Fixture wordmark: 40px of padding on every side that normalization must trim. -->
+  <circle cx="110" cy="90" r="50" fill="#0a7d4f"/>
+  <rect x="180" y="55" width="260" height="70" rx="14" fill="#0a7d4f"/>
+  <rect x="200" y="75" width="90" height="30" rx="6" fill="#f2a900"/>
+</svg>
